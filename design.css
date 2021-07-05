@@ -1,0 +1,136 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.container{
+	background-image: url('underwater.jpg');
+	height: 100vh;
+	width:100vw ;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: cover;
+}
+
+
+.fish-container{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	display: flex;
+}
+
+.fish-container img{
+	height: 100px;
+	position: absolute;
+}
+
+.fish1{
+	top: 33%;
+	left: -15%;
+	transform: translateY(-50%);
+	animation:fishAnimation1 13s linear infinite 2s;
+}
+
+.fish2{
+	top:66%;
+	left: -15%;
+	transform:translateY(-50%);
+	animation:fishAnimation1 9s linear infinite 5s;
+}
+
+.fish3{
+	left: -30%;
+	top: 105%;
+	animation:fishAnimation2 15s linear infinite;
+
+}
+
+.group{
+position: absolute;
+height: 100px !important;
+top: 5%;
+right: -20%;
+animation:fishAnimation3 15s linear infinite 3s;
+    
+}
+
+
+
+@keyframes fishAnimation1{
+	0%{
+      left:-10% ; 
+	}
+
+	100%{
+		left: 150%;
+	}
+}
+
+@keyframes fishAnimation2{
+	0%{
+		left: -30%;
+		top: 110%;
+	}
+	100%{
+		left: 110%;
+		top: -30%;
+
+	}
+}
+
+@keyframes fishAnimation3{
+	0%{
+		right: -15%;
+	}
+	100%{
+		right: 150%;
+	}
+}
+
+
+.bubble-container{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	display: flex;
+}
+
+.bubble-container img{
+	height: 45px;
+	position: absolute;
+	top:140px;
+	transform: translateX(-50%);
+
+}
+
+.bubble1{
+	left:20%;
+	animation: bubbleAnimation 10s linear infinite ;
+}
+
+.bubble2{
+	left:45%;
+	animation: bubbleAnimation 5s linear infinite ;
+}
+
+.bubble3{
+	left:78%;
+	animation: bubbleAnimation 12s linear infinite ;
+}
+
+@keyframes bubbleAnimation{
+	0%{
+       top:120%;
+
+	}
+	75%{
+        opacity: 1;
+	}
+	100%{
+top:20%;
+opacity: 0;
+	}
+}
